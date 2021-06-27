@@ -1,0 +1,12 @@
+let x =0;
+
+/* while (x <10) {
+    console.log(x);
+    x++;
+} */
+
+
+ do {
+    console.log("do while --"+ x);
+    x++;
+} while (x <10)

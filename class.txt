@@ -1,0 +1,25 @@
+class Car {
+    constructor(name, color, brand){
+        this.name = name;
+        this.color = color;
+        this.brand = brand;
+     }
+
+     print = function myPrint() {
+         console.log(this.name +" "+ this.color + " "+ this.brand)
+     }
+
+     p =  (p,q) =>  {
+        console.log(this.name +" "+ this.color + " "+ this.brand)
+    }
+    
+    myPrint1() {
+        console.log(this.name +" "+ this.color + " "+ this.brand)
+    }
+
+}
+
+let c = new Car("Maruti2", "Red", "Maruti");
+
+//console.log(c['brand']);
+c.print();

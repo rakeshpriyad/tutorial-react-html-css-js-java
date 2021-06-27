@@ -1,0 +1,31 @@
+//Arrow function 
+
+/* let hello = function sayHello(msg){
+    return msg;
+}
+ */
+
+//let greetings = (val) => {   return val; }
+
+let greetings = val =>  val+" and India"; 
+
+let msg =greetings("Rakesh US 1")
+console.log(msg)
+
+let myAdd = function myAdd(x, y){
+    let z = x+y;
+    return z;
+}
+
+
+let add = (x, y, p) => {
+ let z=   x+y+p
+ return z;
+};
+
+let sum = add(35,10, 20)
+console.log(sum)
+
+
+let s = myAdd(25,10)
+console.log(s)

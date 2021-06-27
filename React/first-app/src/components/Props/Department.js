@@ -3,7 +3,6 @@ import Emp from './Emp';
 
 class Department extends React.Component {
 	
-	
   render() {
 	  const empInfo = {name: "Rakesh", agge: "30"};
     return (

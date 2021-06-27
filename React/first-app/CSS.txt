@@ -95,3 +95,82 @@ class MyHeader extends React.Component {
 }
 
 ReactDOM.render(<MyHeader />, document.getElementById('root'));
+
+
+
+
+
+CSS Modules
+Another way of adding styles to your application is to use CSS Modules.
+
+CSS Modules are convenient for components that are placed in separate files.
+
+The CSS inside a module is available only for the component that imported it, and you do not have to worry about name conflicts.
+
+Create the CSS module with the .module.css extension, example: mystyle.module.css.
+
+mystyle.module.css:
+Create a new file called "mystyle.module.css" and insert some CSS code in it:
+
+.bigblue {
+  color: DodgerBlue;
+  padding: 40px;
+  font-family: Arial;
+  text-align: center;
+}
+
+
+Import the stylesheet in your component:
+
+App.js:
+import React from 'react';
+import ReactDOM from 'react-dom';
+import styles from './mystyle.module.css'; 
+
+class Car extends React.Component {
+  render() {
+    return <h1 className={styles.bigblue}>Hello Car!</h1>;
+  }
+}
+
+export default Car;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Import the Sass file the same way as you imported a CSS file:
+
+index.js:
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './mysass.scss';
+
+class MyHeader extends React.Component {
+  render() {
+    return (
+      <div>
+      <h1>Hello Style!</h1>
+      <p>Add a little style!.</p>
+      </div>
+    );
+   
+}
+}
+
+ReactDOM.render(<MyHeader />, document.getElementById('root'));
+

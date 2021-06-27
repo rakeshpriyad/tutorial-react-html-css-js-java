@@ -1,0 +1,67 @@
+//console.log("Hello World! Ketan")
+//alert("Hello Ketan")
+//alert(document.getElementById("h").textContent)
+//document.getElementById("h").innerHTML="Hello World1"
+
+//int x=5;
+
+
+// function, function name, parameter, statement, return
+
+function add(x, y) {
+    let z =x+y;
+    return z;
+}
+
+let sum =add(5,10)
+//console.log(sum)
+
+function sayHello(msg){
+    console.log("Hello "+ msg);
+    return msg;
+}
+
+
+
+//let greetings= sayHello("Ketan")
+//console.log(greetings)
+
+//let myObj = {};
+let myObj = {
+    name: "Ketan", 
+    location: "US", 
+    age:21,
+    objPrint: function print(obj, propName){
+        console.log(obj[propName]);
+        
+    }
+};
+
+
+console.log(myObj.age)
+console.log(myObj["name1"])
+
+myObj.objPrint(myObj, "location");
+
+let f =function print(obj, propName){
+    console.log(obj[propName]);
+    
+}
+
+function Person(name, age, objPrint){
+    this.name= name;
+    this.age= age;
+    this.objPrint = objPrint;
+}
+
+let p = new Person("Rakesh", "30", f)
+
+p.objPrint(p, "name")
+
+
+let e =Object.create({name:"Rakesh", age:"30"})
+let e1= Object.assign({name: "", age: "30"})
+
+
+console.log(e.name)
+

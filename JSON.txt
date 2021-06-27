@@ -1,0 +1,43 @@
+//JSON
+
+let emp = { 
+    "name": 'rakesh',
+    'age': "30",
+    'dob': "2021-06-01"
+
+}
+
+console.log(emp.name);
+
+let cars = ["name", "color", "brand"];
+
+
+let empC = {
+    "name": 'Ketan',
+    'age': "30",
+    'dob': "2021-06-01",
+    "dept" : {
+        "dept-name": "Computer Science",
+        "dept-code":  1
+    },
+    "cars": ["name", "color", "brand"],
+    "depts" : [
+        {
+            "dept-name": "Computer Science",
+            "dept-code":  1
+        },
+        {
+            "dept-name": "Physics",
+            "dept-code":  2
+        },
+        {
+            "dept-name": "English",
+            "dept-code":  3
+        },
+        
+
+    ]
+
+}
+
+console.log(empC.depts[1]["dept-name"]);
