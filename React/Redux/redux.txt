@@ -1,0 +1,19 @@
+$ npx create-react-app react-redux-crud-tutorial
+
+Add React Router to React Redux CRUD App
+– Run the command: 
+$ npm install react-router-dom
+
+Initialize Axios for React Redux CRUD with API calls
+Let’s install axios with command: 
+$ npm install axios
+
+Now we need to install Redux, Thunk Middleware and Redux Devtool Extension.
+Run the command:
+
+npm install redux react-redux redux-thunk
+npm install --save-dev redux-devtools-extension
+npm install bootstrap
+
+
+https://bezkoder.com/react-hooks-redux-crud/
