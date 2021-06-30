@@ -1,4 +1,6 @@
 import React from 'react';
+import styles from './form.module.css'; 
+
 
 class MyForm extends React.Component {
    constructor(props){
@@ -43,18 +45,23 @@ class MyForm extends React.Component {
 
     render() {
 
+        let myStyle= {
+            backgroundColor: 'green',
+            color: 'yellow',
+            border: '5px solid blue'
+        }
         return (
             <div style={{textAlign: 'center'}}>
             <div className="brder">
                 <form method="post">
                     <table border="0" width="50%">
                         <tr>
-                            <td><label> EmpId</label></td>
+                            <td><label > EmpId</label></td>
                             <td>&nbsp;&nbsp;&nbsp;</td>
                             <td><input type="text" id="empId" name="empId" onChange={(e) => this.changeHandler(e, "empId")} /></td>
                         </tr>
                         <tr>
-                            <td><label > Emp Name</label></td>
+                            <td><label className={styles.labelStyle}> Emp Name</label></td>
                             <td>&nbsp;&nbsp;&nbsp;</td>
                             <td><input type="text" id="empName" name="empName" onChange={this.changeHandler}/></td>
                         </tr>

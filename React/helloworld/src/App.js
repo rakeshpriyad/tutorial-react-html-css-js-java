@@ -7,7 +7,10 @@ import MyForm from './components/state-ex/forms/empForm';
 import VerticalMenu from './components/menu/VerticalMenu';
 import HorizontalMenu from './components/menu/HorizontalMenu';
 import DropDownMenu from './components/menu/DropDownMenu';
-import DropDownMegaMenu from './components/menu/DropDownMegaMenu';
+import DropDownMegaMenu from './components/mega-menu/DropDownMegaMenu';
+import VerticalMenuList from './components/myMenu/VerticalMenuList';
+import MegaMenu from './components/mega-menu/DropDownMegaMenu';
+import EmpFetch from './fetch-api/fetch';
 
 function App() {
   let emp ={name: "Ketan", age: "30", address:"India"}
@@ -23,9 +26,12 @@ function App() {
       {/*<VerticalMenu />
       <HorizontalMenu />
       <DropDownMenu /> */}
-      <DropDownMegaMenu /> 
+    {/*<DropDownMegaMenu /> */}
+
    {/* <Car /> */}
-      <MyForm />
+    {/*  <MyForm /> */}
+      {/*<MegaMenu /> */}
+    <EmpFetch />
       
     </div>
   );

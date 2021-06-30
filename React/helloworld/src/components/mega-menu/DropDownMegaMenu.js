@@ -1,34 +1,35 @@
 import React from 'react';
-
+import styles from './mega.menu.module.css'; 
 //Horizontal Navigation Bar
 
-const DropDownMegaMenu = () => {
+const MegaMenu = () => {
     return (
-        <div class="navbar">
+        
+        <div className={styles.navbar}>
             <a href="#home">Home</a>
             <a href="#news">News</a>
-            <div class="dropdown">
-                <button class="dropbtn">Dropdown
-                    <i class="fa fa-caret-down"></i>
+            <div className={styles.dropdown}>
+                <button className={styles.dropbtn}>Dropdown
+                    <i className={styles.fa}></i>
                 </button>
-                <div class="dropdown-content">
-                    <div class="header">
+                <div className={styles.dropdownContent}>
+                    <div className={styles.header}>
                         <h2>Mega Menu</h2>
                     </div>
-                    <div class="row">
-                        <div class="column">
+                    <div className={styles.row}>
+                        <div className={styles.column}>
                             <h3>Category 1</h3>
                             <a href="#">Link 1</a>
                             <a href="#">Link 2</a>
                             <a href="#">Link 3</a>
                         </div>
-                        <div class="column">
+                        <div className={styles.column}>
                             <h3>Category 2</h3>
                             <a href="#">Link 1</a>
                             <a href="#">Link 2</a>
                             <a href="#">Link 3</a>
                         </div>
-                        <div class="column">
+                        <div className={styles.column}>
                             <h3>Category 3</h3>
                             <a href="#">Link 1</a>
                             <a href="#">Link 2</a>
@@ -42,4 +43,4 @@ const DropDownMegaMenu = () => {
     )
 }
 
-export default DropDownMegaMenu;
+export default MegaMenu;
