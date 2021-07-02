@@ -83,9 +83,9 @@ class MyForm extends React.Component {
                
             </div>
             <div>
-            Id:    {this.state.empId} <br/>
-            name: {this.state.empName} <br/>
-            age: {this.state.age} <br/>
+            Id:   {this.state.empId} <br/>
+            Name: {this.state.empName} <br/>
+            Age: {this.state.age} <br/>
            </div>
             </div>
 

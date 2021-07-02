@@ -9,7 +9,7 @@ import java.util.List;
 @CrossOrigin
 @RestController
 @RequestMapping("/rest")
-class EmployeeController {
+public class EmployeeController {
 
     private final EmployeeService service;
 
