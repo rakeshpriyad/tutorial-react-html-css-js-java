@@ -9,6 +9,7 @@ import Home from './components/Home';
 import { Route, Link, NavLink, Switch, BrowserRouter as Router } from 'react-router-dom'  
 import Link1 from './components/Link1';
 import NotFound from './components/NotFound';
+import EmployeeForm from './components/employees/EmployeeForm';
 
 /* ReactDOM.render(
   <React.StrictMode>
@@ -21,8 +22,10 @@ import NotFound from './components/NotFound';
 const routing = (  
   <Router>  
     <div>  
-      <h1>React Router Example</h1>  
-      <ul>  
+      
+     { 
+      /*<h1>React Router Example</h1>   
+       <ul>  
         <li>  
           <NavLink to="/" exact activeStyle={  
              {color:'red'}  
@@ -38,11 +41,12 @@ const routing = (
              {color:'magenta'}  
           }>Contact</NavLink>  
         </li>  
-      </ul>  
+        </ul>   */ }
       <Switch>  
          <Route exact path="/" component={App} />  
          <Route path="/about" component={About} />  
          <Route path="/contact" component={Contact} />  
+         <Route path="/createEmp" component={EmployeeForm} />  
          <Route component={NotFound} />  
       </Switch>  
     </div>  

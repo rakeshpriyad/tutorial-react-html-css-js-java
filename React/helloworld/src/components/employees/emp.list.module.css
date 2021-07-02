@@ -1,0 +1,28 @@
+.empTable {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+  border: 1px solid gold;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+
+.empTable col {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.empTable tr:nth-child(even){background-color: #f2f2f2;}
+
+.empTable tr:hover {background-color: #ddd;}
+
+.empTable .header {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+
+  

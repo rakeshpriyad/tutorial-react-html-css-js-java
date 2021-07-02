@@ -20,10 +20,10 @@ const MegaMenu = () => {
                     </div>
                     <div className={styles.row}>
                         <div className={styles.column}>
-                            <h3>Category 1</h3>
-                            <a href="/link1">Link 1</a>
-                            <a href="#">Link 2</a>
-                            <a href="#">Link 3</a>
+                            <h3>Emp</h3>
+                            <a href="/createEmp">Create/Update Employee</a>
+                            <a href="/listAllEmp">List All Employee</a>
+                            <a href="#">Search</a>
                         </div>
                         <div className={styles.column}>
                             <h3>Category 2</h3>
