@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { updateEmp, deleteEmp } from "../actions/emps";
-import EmpDataService from "../services/EmpService";
+import { updateEmp, deleteEmp } from "../../actions/empAction";
+import EmpDataService from "../../services/EmpService";
 
 const Emp = (props) => {
   const initialEmpState = {

@@ -41,7 +41,7 @@ export const updateEmp = (id, data) => async (dispatch) => {
     const res = await EmpDataService.update(id, data);
 
     dispatch({
-      type: UPDATE_Emp,
+      type: UPDATE_EMP,
       payload: data,
     });
 
@@ -79,9 +79,10 @@ export const deleteAllEmps = () => async (dispatch) => {
   }
 };
 
-export const findEmpsByName = (name) => async (dispatch) => {
+export const findByFirstName = (firstName) => async (dispatch) => {
   try {
-    const res = await EmpDataService.findByTitle(name);
+    console.log("firstName: "+ firstName)
+    const res = await EmpDataService.findByFirstName(firstName);
 
     dispatch({
       type: RETRIEVE_EMPS,

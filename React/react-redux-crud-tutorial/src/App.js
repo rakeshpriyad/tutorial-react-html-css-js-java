@@ -3,9 +3,9 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
-import AddTutorial from "./components/AddTutorial";
-import Tutorial from "./components/Tutorial";
-import TutorialsList from "./components/TutorialsList";
+import AddEmployee from "./components/employees/addEmployee";
+import Employee from "./components/employees/employee";
+import EmployeeList from "./components/employees/employeeList";
 
 function App() {
   return (
@@ -30,9 +30,9 @@ function App() {
 
       <div className="container mt-3">
         <Switch>
-          <Route exact path={["/", "/emps"]} component={TutorialsList} />
-          <Route exact path="/add" component={AddTutorial} />
-          <Route path="/emps/:id" component={Tutorial} />
+          <Route exact path={["/", "/emps"]} component={EmployeeList} />
+          <Route exact path="/add" component={AddEmployee} />
+          <Route path="/emps/:id" component={Employee} />
         </Switch>
       </div>
     </Router>

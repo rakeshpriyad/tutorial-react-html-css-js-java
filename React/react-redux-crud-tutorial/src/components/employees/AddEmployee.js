@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { createEmp } from "../actions/emps";
+import { createEmp } from "../../actions/empAction";
 
 const AddEmp = () => {
   const initialEmpState = {
     id: null,
-    title: "",
-    description: "",
+    firstName: "",
+    lastName: "",
     published: false
   };
   const [emp, setEmp] = useState(initialEmpState);
@@ -20,16 +20,15 @@ const AddEmp = () => {
   };
 
   const saveEmp = () => {
-    const { name, age } = emp;
+    const { firstName, lastName } = emp;
 
-    dispatch(createEmp(name, age))
+    dispatch(createEmp(firstName, lastName))
       .then(data => {
         setEmp({
           id: data.id,
-          name: data.name,
-          age: data.age,
-          active: data.active
-        });
+          name: data.firstName,
+          age: data.lastName,
+          });
         setSubmitted(true);
 
         console.log(data);
@@ -56,28 +55,28 @@ const AddEmp = () => {
       ) : (
         <div>
           <div className="form-group">
-            <label htmlFor="title">Name</label>
+            <label htmlFor="firstName">First Name</label>
             <input
               type="text"
               className="form-control"
-              id="name"
+              id="firstName"
               required
-              value={emp.name}
+              value={emp.firstName}
               onChange={handleInputChange}
-              name="name"
+              name="firstName"
             />
           </div>
 
           <div className="form-group">
-            <label htmlFor="description">Age</label>
+            <label htmlFor="lastName">Last Name</label>
             <input
               type="text"
               className="form-control"
-              id="age"
+              id="lastName"
               required
-              value={emp.age}
+              value={emp.lastName}
               onChange={handleInputChange}
-              name="age"
+              name="lastName"
             />
           </div>
 

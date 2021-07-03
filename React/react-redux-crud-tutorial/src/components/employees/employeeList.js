@@ -2,15 +2,15 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   retrieveEmps,
-  findEmpsByTitle,
+  findByFirstName,
   deleteAllEmps,
-} from "../actions/emps";
+} from "../../actions/empAction";
 import { Link } from "react-router-dom";
 
 const EmpsList = () => {
   const [currentEmp, setCurrentEmp] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(-1);
-  const [searchTitle, setSearchTitle] = useState("");
+  const [searchText, setSearchText] = useState("");
 
   const emps = useSelector(state => state.emps);
   const dispatch = useDispatch();
@@ -20,8 +20,8 @@ const EmpsList = () => {
   }, []);
 
   const onChangeSearchTitle = e => {
-    const searchTitle = e.target.value;
-    setSearchTitle(searchTitle);
+    const searchText = e.target.value;
+    setSearchText(searchText);
   };
 
   const refreshData = () => {
@@ -45,9 +45,9 @@ const EmpsList = () => {
       });
   };
 
-  const findByTitle = () => {
+  const findByName = () => {
     refreshData();
-    dispatch(findEmpsByTitle(searchTitle));
+    dispatch(findByFirstName(searchText));
   };
 
   return (
@@ -57,15 +57,15 @@ const EmpsList = () => {
           <input
             type="text"
             className="form-control"
-            placeholder="Search by title"
-            value={searchTitle}
+            placeholder="Search by firstName"
+            value={searchText}
             onChange={onChangeSearchTitle}
           />
           <div className="input-group-append">
             <button
               className="btn btn-outline-secondary"
               type="button"
-              onClick={findByTitle}
+              onClick={findByName}
             >
               Search
             </button>
@@ -85,7 +85,7 @@ const EmpsList = () => {
                 onClick={() => setActiveEmp(emp, index)}
                 key={index}
               >
-                {emp.title}
+                {emp.firstName}
               </li>
             ))}
         </ul>
@@ -103,25 +103,20 @@ const EmpsList = () => {
             <h4>Emp</h4>
             <div>
               <label>
-                <strong>Title:</strong>
+                <strong>First Name:</strong>
               </label>{" "}
-              {currentEmp.title}
+              {currentEmp.firstName}
             </div>
             <div>
               <label>
-                <strong>Description:</strong>
+                <strong>Last Name:</strong>
               </label>{" "}
-              {currentEmp.description}
+              {currentEmp.lastName}
             </div>
-            <div>
-              <label>
-                <strong>Status:</strong>
-              </label>{" "}
-              {currentEmp.published ? "Published" : "Pending"}
-            </div>
+           
 
             <Link
-              to={"/emps/" + currentEmp.id}
+              to={"/employees/" + currentEmp.id}
               className="badge badge-warning"
             >
               Edit

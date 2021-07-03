@@ -1,31 +1,33 @@
-import http from "../http-common";
+import http from "../axios/api";
+
+const endPoint = "/employees"
 
 const getAll = () => {
-  return http.get("/emps");
+  return http.get(endPoint);
 };
 
 const get = id => {
-  return http.get(`/emps/${id}`);
+  return http.get(`${endPoint}/${id}`);
 };
 
 const create = data => {
-  return http.post("/emps", data);
+  return http.post(endPoint, data);
 };
 
 const update = (id, data) => {
-  return http.put(`/emps/${id}`, data);
+  return http.put(`${endPoint}/${id}`, data);
 };
 
 const remove = id => {
-  return http.delete(`/emps/${id}`);
+  return http.delete(`${endPoint}/${id}`);
 };
 
 const removeAll = () => {
-  return http.delete(`/emps`);
+  return http.delete(`${endPoint}`);
 };
 
-const findByName = name => {
-  return http.get(`/emps?name=${name}`);
+const findByFirstName = firstName => {
+  return http.get(`${endPoint}/search/first/${firstName}`);
 };
 
 const EmpService = {
@@ -35,7 +37,7 @@ const EmpService = {
   update,
   remove,
   removeAll,
-  findByTitle
+  findByFirstName
 };
 
 export default EmpService;
