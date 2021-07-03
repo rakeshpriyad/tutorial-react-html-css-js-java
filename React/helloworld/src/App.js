@@ -12,7 +12,8 @@ import VerticalMenuList from './components/myMenu/VerticalMenuList';
 import MegaMenu from './components/mega-menu/DropDownMegaMenu';
 import EmpFetch from './fetch-api/fetch';
 import EmployeeDetails from './components/backend-frontend/EmployeesDetails';
-import EmployeeForm from './components/employees/EmployeeForm';
+import EmployeeForm1 from './components/employees/EmployeeForm1';
+import CustomerForm from './components/customer/customer';
 
 function App() {
   let emp ={name: "Ketan", age: "30", address:"India"}
@@ -34,7 +35,8 @@ function App() {
     {/*  <MyForm /> */}
     <MegaMenu /> 
   {/* <EmpFetch />  */ }
-  <EmployeeForm />
+  {/* <EmployeeForm1 /> */ }
+  <CustomerForm />
       
     </div>
   );

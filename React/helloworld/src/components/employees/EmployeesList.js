@@ -70,12 +70,17 @@ class EmployeeList extends React.Component {
 
     return (<div>
       <table id="employee" className={styles.empTable}>
+      <thead>
         <tr>
           <th className={styles.header}>ID</th>
           <th className={styles.header}>First Name</th>
           <th className={styles.header}>Last Name</th>
         </tr>
-      {elements}
+        </thead>
+        <tbody>
+        {elements}  
+        </tbody>
+      
       </table>
     </div>
     );

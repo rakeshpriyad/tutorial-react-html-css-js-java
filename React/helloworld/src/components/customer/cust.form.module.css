@@ -1,0 +1,21 @@
+
+
+ .table {
+    width: 40%;
+    display: table;
+    margin-left: 20%;
+    margin-top: 2%;
+    border: 1px solid black;
+  }
+  .row {
+    display: table-row;
+    width: auto;
+    clear: both;
+  }
+  .column {
+    display: table-cell;
+    padding: 10px;
+    text-align: justify;
+    
+  }
+  
