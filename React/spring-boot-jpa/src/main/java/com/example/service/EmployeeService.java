@@ -6,8 +6,6 @@ import com.example.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 
@@ -15,10 +13,18 @@ import java.util.List;
 public class EmployeeService {
 
     @Autowired
-    EmployeeRepository repository;
+    private EmployeeRepository repository;
 
     public List<Employee> getEmployees() {
         return repository.findAll();
+    }
+
+    public List<Employee> findByFirstName(String firstName) {
+        return repository.findByFirstName(firstName);
+    }
+
+    public List<Employee> findByLastName(String lastName) {
+        return repository.findByFirstName(lastName);
     }
 
     public Employee save(Employee employee) {
@@ -27,10 +33,9 @@ public class EmployeeService {
 
     public Employee one(Long id) {
         return repository.findById(id)
-                . orElseThrow(() -> new
-               EmployeeNotFoundException(id));
+                .orElseThrow(() -> new
+                        EmployeeNotFoundException(id));
     }
-
 
 
     public Employee replaceEmployee(Employee newEmployee, @PathVariable Long id) {

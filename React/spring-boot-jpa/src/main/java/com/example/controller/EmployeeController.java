@@ -13,7 +13,7 @@ public class EmployeeController {
 
     private final EmployeeService service;
 
-    EmployeeController(EmployeeService service) {
+    public EmployeeController(EmployeeService service) {
         this.service = service;
     }
 
@@ -21,10 +21,22 @@ public class EmployeeController {
     // Aggregate root
     // tag::get-aggregate-root[]
     @GetMapping("/employees")
-    List<Employee> all() {
+    public List<Employee> findAll() {
         return service.getEmployees();
     }
     // end::get-aggregate-root[]
+
+    @GetMapping("/employees/search/first/{firstName}")
+    public List<Employee> findByFirstName(@PathVariable String firstName) {
+        return service.findByFirstName(firstName);
+    }
+
+
+    @GetMapping("/employees/search/last/{lastName}")
+    public List<Employee> findByLastName(@PathVariable String lastName) {
+        return service.findByFirstName(lastName);
+    }
+
 
     @PostMapping("/employees")
     Employee newEmployee(@RequestBody Employee newEmployee) {

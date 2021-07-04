@@ -7,7 +7,7 @@ const AddEmp = () => {
     id: null,
     firstName: "",
     lastName: "",
-    published: false
+    
   };
   const [emp, setEmp] = useState(initialEmpState);
   const [submitted, setSubmitted] = useState(false);

@@ -8,9 +8,9 @@ import {
 
 import EmpDataService from "../services/EmpService";
 
-export const createEmp = (name, age) => async (dispatch) => {
+export const createEmp = (firstName, lastName) => async (dispatch) => {
   try {
-    const res = await EmpDataService.create({ name, age });
+    const res = await EmpDataService.create({ firstName, lastName });
 
     dispatch({
       type: CREATE_EMP,

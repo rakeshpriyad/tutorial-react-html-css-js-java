@@ -1,0 +1,30 @@
+.empTable{
+    display: flex;
+    flex-direction: column; /* turn children ul elements into stacked rows */
+}
+ 
+ 
+.empTable .row{
+    list-style: none;
+    display: flex; /* turn children li elements into flex children */
+    flex: 1;
+    flex-wrap: wrap;
+}
+ 
+.empTable .col{
+    background: #c9f4ca;
+    flex: 1;
+    padding: 10px;
+    border: 1px solid gray;
+    
+}
+ 
+ 
+/* very first row */
+.empTable .row:first-of-type .col{
+    text-align: center;
+    font-weight: bold;
+    background: #062b03;
+    color: #c9f4ca;
+}
+ 
